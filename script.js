@@ -1,24 +1,21 @@
 
-
-let num = Math.floor(Math.random()* 3) + 1
-
 function getComputerChoice(){
+    let num = Math.floor(Math.random()* 3) + 1
+    if (num === 1){
+     return "ROCK"
+    } else if (num === 2) {
+     return "PAPER"
+    } else {
+     return "SCISSORS"
+    }
+  
+ }
 
-   if (num === 1){
-    return "ROCK"
-   } else if (num === 2) {
-    return "PAPER"
-   } else {
-    return "SCISSORS"
-   }
- 
-}
+
 
 function playRound(playerSelection, computerSelection) {
 
-    if ((playerSelection === "ROCK" && computerSelection === "ROCK") || 
-    ((playerSelection === "PAPER" && computerSelection === "PAPER")) || 
-    ((playerSelection === "SCISSORS" && computerSelection === "SCISSORS"))) {
+    if (playerSelection === computerSelection) {
 
         return "Tie"
         
@@ -39,9 +36,13 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game(){
-
-
-
+    
+    
+    for (let i = 0; i < 5; i++ ){
+    let computerSelection = getComputerChoice()
+    let playerSelection = prompt("").toUpperCase()
+    console.log(playRound(playerSelection, computerSelection))
+    }
 
 }
 
@@ -50,13 +51,22 @@ function game(){
 
 
 
+game()
 
 
 
-let computerSelection = getComputerChoice()
-let playerSelection = (prompt("Rock, Paper or Scissors?")).toUpperCase()
 
 
-console.log(playRound(playerSelection, computerSelection))
 
-console.log(getComputerChoice())
+
+
+
+
+
+
+
+
+
+
+
+
