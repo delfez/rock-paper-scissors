@@ -66,26 +66,11 @@ function game(){
     } else {
         console.log("Game Over! It's a tie!")
     }
+    alert("Thanks for playing! Reload the page to play again")
 }
 
 
-
-
-
-
-
-
 game()
-
-
-
-
-
-
-
-
-
-
 
 
 
